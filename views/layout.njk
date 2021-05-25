@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% block head %}
+        <title>Top Team - Manager</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+    <header>
+        <div class="links">
+            <a href="/" class="active">Instrutores</a>
+            <a href="/Membros">Aulas</a>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>

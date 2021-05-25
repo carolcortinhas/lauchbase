@@ -1,0 +1,71 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<form class="card" method="POST" action="/instrutores">
+    <section 
+        class="avatar" 
+        style="background: url(https://scontent.fbel1-1.fna.fbcdn.net/v/t1.6435-9/116909698_3343232045744420_579615553434240624_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeECB5T7AO4aTnsfQgNeXfGk6vazQBBraDfq9rNAEGtoN_WCqoFru0vnfEBL2_FDt32o9FFq1dtnwUr9c2eGZm3M&_nc_ohc=DjrEGkpjuYEAX_CIrwy&_nc_ht=scontent.fbel1-1.fna&oh=73ddb6318f242d8d3496be86207dbb14&oe=60D1F474) center center / cover">
+    </section>
+    <section class="detalhes">
+
+        <h3>Detalhes</h3>
+
+        <div class="item">
+            <div>Avatar URL</div>
+            <div>
+                <input 
+                    type="url"
+                    name="avatar_url"
+                    placeholder="https://"
+                >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Instrutor</div>
+            <div>
+                <input 
+                    type="text"
+                    name="name"
+                    placeholder="Nome do instrutor"
+                >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Data de Nascimento</div>
+            <div>
+                <input
+                    type="date"
+                    name="birth"
+                >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Sexo</div>
+            <div>
+                <span><input type="radio" name="gender" value "M" checked> Masculino</span>
+                <span><input type="radio" name="gender" value "F"> Feminino</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Área de atuação</div>
+            <div>
+                <input 
+                    type="text" 
+                    name="services"
+                    placeholder="Separe os serviços prestados por vírgula"
+                >
+            </div>
+        </div>
+
+        <button type="submit">Salvar</button>
+
+    </section>
+
+</div>
+
+{% endblock content %}
