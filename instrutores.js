@@ -15,6 +15,6 @@ exports.post = function(req, res) {
                  return res.redirect("/instrutores")
         })
     
-    return res.send(req.body)
+    // return res.send(req.body)
 }
 
