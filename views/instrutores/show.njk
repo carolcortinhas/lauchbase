@@ -1,0 +1,49 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="card">
+    <section 
+        class="avatar" 
+        style="background: url({{instrutor.avatar_url}}) center center / cover">
+    </section>
+    <section class="detalhes">
+
+        <h3>Detalhes</h3>
+
+        <div class="item">
+            <div>Instrutor</div>
+            <div>{{instrutor.name}}</div>
+        </div>
+
+        <div class="item">
+            <div>Idade</div>
+            <div>{{instrutor.age}}</div>
+        </div>
+
+        <div class="item">
+            <div>Sexo</div>
+            <div>{{ "Masculino" if instrutor.gender == "M" else "Feminino"}}</div>
+        </div>
+
+        <div class="item">
+            <div>Acompanhamento</div>
+            <div>
+                {% for service in instrutor.services %}
+                <span>{{service}}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Desde</div>
+            <div>{{instrutor.created_at}}</div>
+        </div>
+
+        <a href="#" class="button">Editar</a>
+
+    </section>
+
+</div>
+
+{% endblock content %}
